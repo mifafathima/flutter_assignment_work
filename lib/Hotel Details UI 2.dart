@@ -57,7 +57,7 @@ class HotelDetailsUI extends StatelessWidget {
                   color: Colors.grey,
                   borderRadius: BorderRadius.circular(30)
                 ),
-                child: Center(child: Text("8.4/85 reviews",style: TextStyle(color: Colors.white),)),
+                child: Center(child: Text("8.4/85 reviews",style: TextStyle(color: Colors.black),)),
               )
           ),
           Positioned(
@@ -71,27 +71,75 @@ class HotelDetailsUI extends StatelessWidget {
               SizedBox(height: 10,),
 
               Padding(
-                padding: const EdgeInsets.all(20.0),
+                padding: const EdgeInsets.only(left: 10),
                 child: Row(
                   children: [
                     RatingStars(rating: 4,),
-                    SizedBox(width: 250,),
-                    Text("\$ 400",style: TextStyle(color: Colors.purple,fontSize: 20,fontWeight: FontWeight.bold),)
+                    SizedBox(width: 140,),
+                    Column(
+                      children: [
+                        Text("\$ 400",style: TextStyle(color: Colors.purple,fontSize: 20,fontWeight: FontWeight.bold),),
+                        Text(" /Per night",style: TextStyle(color: Colors.blueGrey,fontSize: 15),)
+                      ],
+                    )
                   ],
                 ),
               ),
-            Row(
-              children: [
-                Icon(Icons.location_on_sharp,size: 20,color: Colors.red,),
-                Text("Bolgatty Island, Kochi (Cochin) 682504 India",style: TextStyle(color: Colors.blueGrey),),
-                SizedBox(width: 120,),
-                Text("/ Per night",style: TextStyle(color: Colors.black,fontSize: 15),)
-              ],
-            )
+            Padding(
+              padding: const EdgeInsets.only(left: 10),
+              child: Row(
+                children: [
+                  Icon(Icons.location_on_sharp,size: 20,color: Colors.red,),
+                  Text("Bolgatty Island, Kochi",style: TextStyle(color: Colors.blueGrey),),
+                  SizedBox(width: 120,),
+                ],
+              ),
+            ),
+            SizedBox(height: 20,),
+            Container(
+              height: 35,
+                width: 300,
+              decoration: BoxDecoration(
+                color: Colors.purple,
+                borderRadius: BorderRadius.circular(30)
+              ),
+              child: Center(child: Text("Book Now",style: TextStyle(color:Colors.white ,fontSize: 20),)),
+            ),
+      SizedBox(height: 20,),
 
+      Text("Grand Hyatt Kochi Bolgatty",style: GoogleFonts.volkhov(
+        fontSize: 30,
+        color: Colors.black54
+      ),
+      ),
+            SizedBox(height: 20,),
+
+      Expanded(
+        child: SingleChildScrollView(
+          scrollDirection: Axis.vertical,
+          child: Text("Perched on the serene Bolgatty Island, Grand Hyatt Kochi Bolgatty is a waterfront urban 5-star resort"
+              " overlooking the backwaters of Vembanad Lake. With its bold & compelling works of art and architecture,"
+              " dramatic landscapes, opulent guestrooms and suites, exquisite dining destinations, and one of the larg"
+              "est event spaces in South India, our hotel is set to redefine living grandly in the city. Live the perfe"
+              "ct vacation dream on Kochi's maiden Nattika- a 2-bedroom luxury houseboat and a conference boat as you e"
+              "njoy the breathtaking vistas of Vembanad Lake. The opulent interior features pleasant lounges and dining"
+              " spaces which makes it a floating suite of Grand Hyatt Kochi Bolgatty. Waft through the scenic backwaters "
+              "while you host a meeting on board of our conference boat. The extraordinary backdrops, remoteness and flora"
+              " & fauna of the islands of lake offer an exhilarating way to enjoy your next vacation or the upcoming conference.",style: GoogleFonts.playfairDisplay(
+            fontSize: 15
+          ),),
+        ),
+      ),
       ],
-    ),)
-    ,
+    ),),
+      bottomNavigationBar: BottomNavigationBar(
+        selectedItemColor: Colors.purpleAccent,
+          items: [
+        BottomNavigationBarItem(icon: Icon(Icons.search),label: "search"),
+        BottomNavigationBarItem(icon: Icon(Icons.favorite),label: "favourite"),
+        BottomNavigationBarItem(icon: Icon(Icons.settings),label: "settings"),
+
+      ]),
     );
   }
 }
