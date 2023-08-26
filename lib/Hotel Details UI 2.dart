@@ -23,7 +23,7 @@ class HotelDetailsUI extends StatelessWidget {
           Container(
         height: 350,
           width: double.infinity,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
               image: DecorationImage(
                   fit: BoxFit.cover,
                   image: NetworkImage(
@@ -57,10 +57,10 @@ class HotelDetailsUI extends StatelessWidget {
                   color: Colors.grey,
                   borderRadius: BorderRadius.circular(30)
                 ),
-                child: Center(child: Text("8.4/85 reviews",style: TextStyle(color: Colors.black),)),
+                child: const Center(child: Text("8.4/85 reviews",style: TextStyle(color: Colors.black),)),
               )
           ),
-          Positioned(
+          const Positioned(
               right: 30,
               bottom:20,
               child:FaIcon(FontAwesomeIcons.heart,color: Colors.white,)
@@ -68,15 +68,15 @@ class HotelDetailsUI extends StatelessWidget {
         ],
   
       ),
-              SizedBox(height: 10,),
+              const SizedBox(height: 10,),
 
               Padding(
                 padding: const EdgeInsets.only(left: 10),
                 child: Row(
                   children: [
                     RatingStars(rating: 4,),
-                    SizedBox(width: 140,),
-                    Column(
+                    const SizedBox(width: 140,),
+                    const Column(
                       children: [
                         Text("\$ 400",style: TextStyle(color: Colors.purple,fontSize: 20,fontWeight: FontWeight.bold),),
                         Text(" /Per night",style: TextStyle(color: Colors.blueGrey,fontSize: 15),)
@@ -85,8 +85,8 @@ class HotelDetailsUI extends StatelessWidget {
                   ],
                 ),
               ),
-            Padding(
-              padding: const EdgeInsets.only(left: 10),
+            const Padding(
+              padding: EdgeInsets.only(left: 10),
               child: Row(
                 children: [
                   Icon(Icons.location_on_sharp,size: 20,color: Colors.red,),
@@ -95,7 +95,7 @@ class HotelDetailsUI extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(height: 20,),
+            const SizedBox(height: 20,),
             Container(
               height: 35,
                 width: 300,
@@ -103,16 +103,16 @@ class HotelDetailsUI extends StatelessWidget {
                 color: Colors.purple,
                 borderRadius: BorderRadius.circular(30)
               ),
-              child: Center(child: Text("Book Now",style: TextStyle(color:Colors.white ,fontSize: 20),)),
+              child: const Center(child: Text("Book Now",style: TextStyle(color:Colors.white ,fontSize: 20),)),
             ),
-      SizedBox(height: 20,),
+      const SizedBox(height: 20,),
 
       Text("Grand Hyatt Kochi Bolgatty",style: GoogleFonts.volkhov(
         fontSize: 30,
         color: Colors.black54
       ),
       ),
-            SizedBox(height: 20,),
+            const SizedBox(height: 20,),
 
       Expanded(
         child: SingleChildScrollView(
@@ -135,9 +135,9 @@ class HotelDetailsUI extends StatelessWidget {
       bottomNavigationBar: BottomNavigationBar(
         selectedItemColor: Colors.purpleAccent,
           items: [
-        BottomNavigationBarItem(icon: Icon(Icons.search),label: "search"),
-        BottomNavigationBarItem(icon: Icon(Icons.favorite),label: "favourite"),
-        BottomNavigationBarItem(icon: Icon(Icons.settings),label: "settings"),
+        const BottomNavigationBarItem(icon: Icon(Icons.search),label: "search"),
+        const BottomNavigationBarItem(icon: Icon(Icons.favorite),label: "favourite"),
+        const BottomNavigationBarItem(icon: Icon(Icons.settings),label: "settings"),
 
       ]),
     );
