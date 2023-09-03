@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_assignment_work/Hotel%20Details%20UI%202.dart';
+import 'package:flutter_assignment_work/Hotel%20UI/Hotel%20Details%20UI%202.dart';
 import 'package:flutter_assignment_work/rating%20stars.dart';
 import 'package:google_fonts/google_fonts.dart';
 
