@@ -10,7 +10,13 @@ void main() {
   ));
 }
 
-class MusicPlayer_UI2 extends StatelessWidget {
+class MusicPlayer_UI2 extends StatefulWidget {
+  @override
+  State<MusicPlayer_UI2> createState() => _MusicPlayer_UI2State();
+}
+
+class _MusicPlayer_UI2State extends State<MusicPlayer_UI2> {
+
   var images =[
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAPwCf_H83ybfS4PvOCnmV25dn3OGfNqWY2w&usqp=CAU",
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGBjRV7XCj-A-IFzps7mg-lZD2ERX2F0vKnJxW18-Xg7jrQTDOqkZ8vb3hWKgfuOzeH7A&usqp=CAU",
@@ -25,6 +31,7 @@ class MusicPlayer_UI2 extends StatelessWidget {
 
 
   ];
+
   var title1 =[
     "Yummy",
     "Let Me Love You",
@@ -37,6 +44,7 @@ class MusicPlayer_UI2 extends StatelessWidget {
     "Taki Taki",
     "August"
   ];
+
   var subtitle1 =[
     "Justin Bieber",
     "DJ Snake,Justin Bieber",
@@ -49,6 +57,7 @@ class MusicPlayer_UI2 extends StatelessWidget {
     "DJ Snake,Selena Gomez",
     "Taylor Swift",
   ];
+
 
   @override
   Widget build(BuildContext context) {
@@ -71,7 +80,7 @@ class MusicPlayer_UI2 extends StatelessWidget {
             fontSize: 20, color: Colors.pinkAccent)
             ),
           ),
-          SizedBox(height: 10,),
+          const SizedBox(height: 10,),
           CarouselSlider(
               items:[
                 Padding(
@@ -81,7 +90,7 @@ class MusicPlayer_UI2 extends StatelessWidget {
                     width: 250,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
-                      image: DecorationImage(
+                      image: const DecorationImage(
                         fit: BoxFit.cover,
                           image: NetworkImage("assets/images/playlist img11.jpeg"))
                     ),
@@ -94,7 +103,7 @@ class MusicPlayer_UI2 extends StatelessWidget {
                     width: 250,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
-                        image: DecorationImage(
+                        image: const DecorationImage(
                             fit: BoxFit.cover,
                             image: NetworkImage("assets/images/playlist img10.jpeg"))
                     ),
@@ -107,7 +116,7 @@ class MusicPlayer_UI2 extends StatelessWidget {
                     width: 250,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
-                        image: DecorationImage(
+                        image: const DecorationImage(
                             fit: BoxFit.cover,
                             image: NetworkImage("assets/images/playlist img8.jpeg"))
                     ),
@@ -120,7 +129,7 @@ class MusicPlayer_UI2 extends StatelessWidget {
                     width: 250,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
-                        image: DecorationImage(
+                        image: const DecorationImage(
                             fit: BoxFit.cover,
                             image: NetworkImage("assets/images/playlist img9.jpeg"))
                     ),
@@ -133,7 +142,7 @@ class MusicPlayer_UI2 extends StatelessWidget {
                     width: 250,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
-                        image: DecorationImage(
+                        image: const DecorationImage(
                             fit: BoxFit.cover,
                             image: NetworkImage("assets/images/playlist img5.jpeg"))
                     ),
@@ -146,7 +155,7 @@ class MusicPlayer_UI2 extends StatelessWidget {
                     width: 250,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
-                        image: DecorationImage(
+                        image: const DecorationImage(
                             fit: BoxFit.cover,
                             image: NetworkImage("assets/images/playlist img1.jpeg"))
                     ),
@@ -167,7 +176,7 @@ class MusicPlayer_UI2 extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
               )
           ),
-          SizedBox(height: 20,),
+          const SizedBox(height: 20,),
           Padding(
             padding: const EdgeInsets.only(left: 20),
             child: Text("Recommended for you",style: GoogleFonts.merriweatherSans(
@@ -178,9 +187,9 @@ class MusicPlayer_UI2 extends StatelessWidget {
               children:
                 List.generate(10, (index) => ListTile(
                   leading: Image(image: NetworkImage(images[index])),
-                  title: Text(title1[index],style: TextStyle(color: Colors.white),),
-                  subtitle: Text(subtitle1[index],style: TextStyle(color: Colors.grey),),
-                  trailing: Row(
+                  title: Text(title1[index],style: const TextStyle(color: Colors.white),),
+                  subtitle: Text(subtitle1[index],style: const TextStyle(color: Colors.grey),),
+                  trailing: const Row(
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       Icon(Icons.star_border_outlined,color: Colors.pinkAccent),
@@ -195,31 +204,6 @@ class MusicPlayer_UI2 extends StatelessWidget {
             ),
 
         ],
-      ),
-      bottomNavigationBar: FlashyTabBar(
-        backgroundColor: Colors.black,
-         selectedIndex: 0,
-        showElevation: true,
-        items: [
-          FlashyTabBarItem(
-            activeColor: Colors.pink,
-            inactiveColor: Colors.white,
-            icon: const Icon(Icons.home,color: Colors.white,),
-            title: const Text('Home'),
-          ),
-          FlashyTabBarItem(
-            icon: const Icon(Icons.search,color: Colors.white,),
-            title: const Text('Search'),
-          ),
-          FlashyTabBarItem(
-            icon: const Icon(Icons.featured_play_list_outlined,color: Colors.white,),
-            title: const Text(' Playlists',style: TextStyle(color: Colors.pink),),
-          ),
-          FlashyTabBarItem(
-            icon: const Icon(Icons.list,color: Colors.white,),
-            title: const Text('Settings'),
-          ),
-        ], onItemSelected: (i) {},
       ),
     );
   }

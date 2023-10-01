@@ -9,8 +9,13 @@ void main() {
   ));
 }
 
-class MusicPlayer_UI extends StatelessWidget {
+class MusicPlayer_UI extends StatefulWidget {
 
+  @override
+  State<MusicPlayer_UI> createState() => _MusicPlayer_UIState();
+}
+
+class _MusicPlayer_UIState extends State<MusicPlayer_UI> {
   var images = [
     "assets/images/playlist img11.jpeg",
     "assets/images/playlist img10.jpeg",
@@ -20,7 +25,7 @@ class MusicPlayer_UI extends StatelessWidget {
     "assets/images/playlist img1.jpeg",
 
   ];
-  var Select = 0;
+
 
 
   @override
@@ -91,31 +96,7 @@ class MusicPlayer_UI extends StatelessWidget {
 
 
         ),
-      bottomNavigationBar: FlashyTabBar(
-        backgroundColor: Colors.black,
-        selectedIndex: 2,
-        showElevation: true,
-        items: [
-          FlashyTabBarItem(
-            icon: const Icon(Icons.home,color: Colors.white,),
-            title: const Text('Home'),
-          ),
-          FlashyTabBarItem(
-            icon: const Icon(Icons.search,color: Colors.white,),
-            title: const Text('Search'),
-          ),
-          FlashyTabBarItem(
-            activeColor: Colors.pink,
-            inactiveColor: Colors.white,
-            icon: const Icon(Icons.featured_play_list_outlined,color: Colors.white,),
-            title: const Text(' Playlists',style: TextStyle(color: Colors.pink),),
-          ),
-          FlashyTabBarItem(
-            icon: const Icon(Icons.list,color: Colors.white,),
-            title: const Text('Settings'),
-          ),
-        ], onItemSelected: (i) {},
-      ),
+
     );
 
   }
