@@ -36,8 +36,13 @@ dependencies:
   flashy_tab_bar2: ^0.0.6
   font_awesome_flutter: ^10.5.0
   carousel_slider: ^4.2.1
+  #Hive
   hive: ^2.2.3
   hive_flutter: ^1.1.0
+  #firebase phone auth
+  firebase_auth: ^4.10.1
+  firebase_core: ^2.17.0
+  intl_phone_field: ^3.2.0
 
 
   # The following adds the Cupertino Icons font to your application.

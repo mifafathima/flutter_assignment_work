@@ -64,13 +64,13 @@ class ProductList extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text(
+        title: const Text(
           "Product List",
           style: TextStyle(
           color: Colors.black
         ),),
         backgroundColor: Colors.redAccent,
-        actions: [
+        actions: const [
           Icon(Icons.shopping_cart),
           SizedBox(width: 15,)
         ],
@@ -94,7 +94,7 @@ class ProductList extends StatelessWidget {
                 ),
               ),
               trailing:ElevatedButton(onPressed: (){},
-                child: Text("Add to Cart"),
+                child: const Text("Add to Cart"),
                 style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all(Colors.redAccent)),),
             )

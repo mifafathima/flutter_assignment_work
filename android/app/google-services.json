@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "688679644329",
+    "project_id": "phoneauthenticationfireb-c3fb3",
+    "storage_bucket": "phoneauthenticationfireb-c3fb3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:688679644329:android:5b3dd8d078bf39a8680db8",
+        "android_client_info": {
+          "package_name": "com.mifa.flutter_assignment_work"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyANBP86SfFfZIg_kluVCIElcd_LnzcML-w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

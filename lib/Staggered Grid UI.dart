@@ -97,14 +97,14 @@ class Stag_Grid extends StatelessWidget {
                                       image: NetworkImage(images[index]))
                               ),
                             ),
-                            margin: EdgeInsets.only(left: 20,right: 20,top: 5),
+                            margin: const EdgeInsets.only(left: 20,right: 20,top: 5),
                           ),
-                          SizedBox(height: 20,),
+                          const SizedBox(height: 20,),
                           Text(name[index],textAlign: TextAlign.right,style: GoogleFonts.lora(
                               fontSize: 18,
                               color: Colors.indigo
                           ),),
-                          SizedBox(height: 10,),
+                          const SizedBox(height: 10,),
                           Text(place[index],style: GoogleFonts.cinzel(
                               fontSize: 10,
                               color: Colors.redAccent
